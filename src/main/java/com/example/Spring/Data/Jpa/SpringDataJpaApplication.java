@@ -27,7 +27,7 @@ public class SpringDataJpaApplication {
 
 		PaginationService pg = apt.getBean(PaginationService.class);
 
-		System.out.println(pg.getData(2,2));
+		System.out.println(pg.getData(1,2));
 	}
 
 }
