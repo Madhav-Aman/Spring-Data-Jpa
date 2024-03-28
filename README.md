@@ -6,10 +6,7 @@ Welcome to the Spring Data JPA Learning Repository! This repository serves as a 
 
 1. [Introduction](#introduction)
 2. [Topics Covered](#topics-covered)
-3. [Folder Structure](#folder-structure)
-4. [How to Use](#how-to-use)
-5. [Contributing](#contributing)
-6. [License](#license)
+
 
 ## Introduction
 
@@ -29,7 +26,5 @@ This repository covers a range of topics related to Spring Data JPA, including b
 - Repository Customization
 - Transactions
 
-## Folder Structure
 
-The repository is organized into folders, each focusing on a specific topic or concept. Here's the general structure:
 
