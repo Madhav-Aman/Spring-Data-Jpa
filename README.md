@@ -38,5 +38,5 @@ Once you've created a Sort object, you can pass it to the repository methods to 
 
 You can pass the Sort object to this method to retrieve sorted data from the repository.
 
-**Conclusion**
+## Conclusion
 Sorting data in your Spring Data application using the PagingAndSortingRepository interface is straightforward. By creating a Sort object and passing it to the repository methods, you can efficiently retrieve sorted data based on specified properties and sorting directions.
