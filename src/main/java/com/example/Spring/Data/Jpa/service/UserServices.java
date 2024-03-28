@@ -1,15 +1,11 @@
 package com.example.Spring.Data.Jpa.service;
 
-import com.example.Spring.Data.Jpa.entity.LaptopEntity;
 import com.example.Spring.Data.Jpa.entity.UserEntity;
 import com.example.Spring.Data.Jpa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.text.DateFormat;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 @Service
@@ -20,46 +16,24 @@ public class UserServices {
     private UserRepository userRepository;
 
 
+    public void Ascendingage(){
+        Sort sort = Sort.by(Sort.Direction.ASC,"age");
 
-//    public UserEntity getByUsernameAndEmail(String  username,String email){
-//        return userRepository.findByUsernameAndEmail(username,email);
-//    }
-//
-//
-//    public List<UserEntity> getByUsernameorEmail(String  username,String email){
-//        return userRepository.findByUsernameOrEmail(username,email);
-//    }
-//
-//    public List<UserEntity> getByAgeIsEnqual(Integer age){
-//        return userRepository.findByAgeEquals(age);
-//    }
-//
-//    public List<UserEntity> getBetweenAge(Integer minage,Integer maxage){
-//        return userRepository.findByAgeBetween(minage,maxage);
-//    }
-//
-//    public List<UserEntity> getByAgeNotNull(){
-//        return userRepository.findByAgeIsNotNull();
-//    }
-//
-//    public List<UserEntity> getUsernameStartingWith(String username){
-//        return userRepository.findByUsernameStartingWith(username);
-//    }
-//
-//    public List<UserEntity> findByAgeOrderByDesc(){
-//        return userRepository.findByUsernameStartingWithOrderByAgeDesc("p");
-//    }
 
-    public List<UserEntity> findByAgeOrderByDesc(){
-        return userRepository.find6Character();
-    }
 
-    public List<UserEntity> findByAge(int age){
-        return userRepository.findByAge(age);
-    }
-    public List<LaptopEntity> findByLapID(int lapID){
-        return userRepository.findByLapID(lapID);
+        List<UserEntity> users = userRepository.findAll(sort);
+
+        users.stream().forEach(System.out::println);
     }
 
 
+    public void Decendingage(){
+        Sort sort = Sort.by(Sort.Direction.DESC,"age");
+
+
+
+        List<UserEntity> users = userRepository.findAll(sort);
+
+        users.stream().forEach(System.out::println);
+    }
 }
