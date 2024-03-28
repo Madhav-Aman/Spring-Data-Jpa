@@ -1,5 +1,6 @@
 package com.example.Spring.Data.Jpa.repository;
 
+import com.example.Spring.Data.Jpa.entity.LaptopEntity;
 import com.example.Spring.Data.Jpa.entity.UserEntity;
 import org.apache.catalina.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -35,6 +36,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     @Query("select u from UserEntity u where u.age = ?1")
     List<UserEntity> findByAge(int age);
 
-
+    @Query("select l from LaptopEntity l where l.lapID = ?1")
+    List<LaptopEntity> findByLapID(int age);
     
 }

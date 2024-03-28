@@ -1,5 +1,6 @@
 package com.example.Spring.Data.Jpa.service;
 
+import com.example.Spring.Data.Jpa.entity.LaptopEntity;
 import com.example.Spring.Data.Jpa.entity.UserEntity;
 import com.example.Spring.Data.Jpa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,9 @@ public class UserServices {
 
     public List<UserEntity> findByAge(int age){
         return userRepository.findByAge(age);
+    }
+    public List<LaptopEntity> findByLapID(int lapID){
+        return userRepository.findByLapID(lapID);
     }
 
 
