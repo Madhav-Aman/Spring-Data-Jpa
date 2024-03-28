@@ -1,5 +1,6 @@
 package com.example.Spring.Data.Jpa;
 
+import com.example.Spring.Data.Jpa.service.PaginationService;
 import com.example.Spring.Data.Jpa.service.UserServices;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,9 @@ public class SpringDataJpaApplication {
 //		System.out.println(services.findByAge(19));
 //		System.out.println(services.findByLapID(19));
 
+		PaginationService pg = apt.getBean(PaginationService.class);
+
+		System.out.println(pg.getData(2,2));
 	}
 
 }
