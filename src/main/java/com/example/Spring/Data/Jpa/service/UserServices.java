@@ -53,5 +53,9 @@ public class UserServices {
         return userRepository.find6Character();
     }
 
+    public List<UserEntity> findByAge(int age){
+        return userRepository.findByAge(age);
+    }
+
 
 }

@@ -21,6 +21,7 @@ public class SpringDataJpaApplication {
 //		System.out.println(services.getUsernameStartingWith("p"));
 //		System.out.println(services.findByAgeOrderByDesc());
 		System.out.println(services.findByAgeOrderByDesc());
+		System.out.println(services.findByAge(19));
 
 	}
 

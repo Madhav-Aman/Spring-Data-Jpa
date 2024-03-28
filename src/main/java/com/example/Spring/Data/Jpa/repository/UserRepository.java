@@ -32,6 +32,9 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     @Query("select u from UserEntity u where u.username LIKE '%a%' ")
     List<UserEntity> find6Character();
 
+    @Query("select u from UserEntity u where u.age = ?1")
+    List<UserEntity> findByAge(int age);
+
 
     
 }
